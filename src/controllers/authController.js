@@ -1,36 +1,42 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-
-const ADMIN_USERNAME = "admin";
-// Pegamos tu hash generado
-const ADMIN_PASSWORD_HASH = "$2b$10$4sL1wT5PVwlmMM607QO9.uRIXBULgWljQb9pn1TwYE5Ig88Gcre0O"; 
+const User = require('../database/User'); // Importamos el nuevo archivo
 
 const login = async (req, res) => {
     const { username, password } = req.body;
 
-    if (username !== ADMIN_USERNAME) {
-        return res.status(401).json({ status: "FAILED", data: { error: "Usuario incorrecto" } });
+    try {
+        // Buscamos al usuario en la BBDD Atlas
+        const user = await User.findUserByUsername(username);
+
+        if (!user) {
+            return res.status(401).json({ status: "FAILED", data: { error: "Usuario o contraseña incorrectos" } });
+        }
+
+        // Comparamos la contraseña con el hash de la BBDD
+        const isMatch = await bcrypt.compare(password, user.password);
+        
+        if (!isMatch) {
+            return res.status(401).json({ status: "FAILED", data: { error: "Usuario o contraseña incorrectos" } });
+        }
+
+        // Generamos el Token
+        const token = jwt.sign(
+            { user: user.username }, 
+            process.env.JWT_SECRET, 
+            { expiresIn: process.env.JWT_EXPIRES_IN }
+        );
+
+        res.send({ 
+            status: "OK", 
+            data: { 
+                token: token,
+                message: "¡Login correcto desde BBDD! Guarda este token."
+            } 
+        });
+    } catch (error) {
+        res.status(500).json({ status: "FAILED", data: { error: error.message } });
     }
-
-    const isMatch = await bcrypt.compare(password, ADMIN_PASSWORD_HASH);
-    
-    if (!isMatch) {
-        return res.status(401).json({ status: "FAILED", data: { error: "Contraseña incorrecta" } });
-    }
-
-    const token = jwt.sign(
-        { user: username }, 
-        process.env.JWT_SECRET, 
-        { expiresIn: process.env.JWT_EXPIRES_IN }
-    );
-
-    res.send({ 
-        status: "OK", 
-        data: { 
-            token: token,
-            message: "¡Login correcto! Guarda este token para tus peticiones POST/DELETE/PATCH"
-        } 
-    });
 };
 
 module.exports = { login };
