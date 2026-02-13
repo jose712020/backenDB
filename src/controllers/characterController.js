@@ -55,7 +55,7 @@ const deleteOneCharacter = async (req, res) => {
 
     try {
         await characterService.deleteOneCharacter(characterId);
-        res.status(204).send({ status: "OK" }); 
+        res.status(200).send({ status: "OK", message: "Personaje borrado correctamente" }); 
     } catch (error) {
         res.status(error?.status || 500).send({ status: "FAILED", data: { error: error?.message || error } });
     }
