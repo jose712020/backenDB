@@ -38,9 +38,17 @@ const swaggerOptions = {
         info: {
             title: "Dragon Ball API",
             version: "1.0.0",
-            description: "API interactiva de Dragon Ball con Seguridad JWT (2DAM - PSP)",
         },
-        servers: [{ url: "http://localhost:3000" }],
+        servers: [
+        {
+            url: 'https://dragonball-api-jl.onrender.com',
+            description: 'Servidor de Producción (Render)'
+        },
+        {
+            url: 'http://localhost:3000',
+            description: 'Servidor Local'
+        }
+        ],
         components: {
             securitySchemes: {
                 bearerAuth: {
@@ -140,7 +148,7 @@ const swaggerOptions = {
             }
         }
     },
-    apis: [], 
+    apis: ['./src/routes/*.js'], 
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
