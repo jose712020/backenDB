@@ -50,7 +50,12 @@ const deleteOneCharacter = async (characterId) => {
 
 const updateOneCharacter = async (characterId, changes) => {
     try {
-        return await Character.updateOneCharacter(characterId, changes);
+        const updatedChanges = {
+            ...changes,
+            updatedAt: new Date().toISOString()
+        };
+
+        return await Character.updateOneCharacter(characterId, updatedChanges);
     } catch (error) {
         throw error;
     }

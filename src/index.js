@@ -26,7 +26,7 @@ const cors = require('cors');
 const swaggerUI = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
 const { connectDB } = require('./database/connection');
-const authController = require('../src/controllers/authContoller');
+const authController = require('./controllers/authController');
 const v1CharacterRouter = require('./v1/routes/characterRoutes');
 
 const app = express(); // Primero inicializamos la app
