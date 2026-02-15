@@ -39,7 +39,7 @@ Es obligatorio el uso de un archivo .env en la raíz del proyecto para gestionar
 
 ```
 PORT=3000
-MONGO_URI=tu_cadena_de_conexion_mongodb_atlas
+MONGO_URI=mongodb+srv://<usuario>:<password>@cluster0.example.mongodb.net/dragonball_db
 JWT_SECRET=tu_clave_secreta_para_firmar_tokens
 JWT_EXPIRES_IN=1h
 ```
