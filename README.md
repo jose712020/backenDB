@@ -46,14 +46,14 @@ Para desarrollo con recarga automática (Nodemon):
 npm run dev
 ```
 
-🏗️ Estructura del Proyecto
+## 🏗️ Estructura del Proyecto
 - **src/index.js:** Punto de entrada, configuración de Express, Middlewares y Swagger.
 - **src/v1/routes/:** Definición de rutas y aplicación del middleware de autenticación.
 - **src/controllers/:** Gestión de peticiones HTTP y validación básica de entrada.
 - **src/services/:** Lógica de negocio y procesamiento de datos antes de ir a BBDD.
 - **src/database/:** Conexión y operaciones CRUD utilizando el driver nativo de MongoDB.
 
-🔐 Guía de Uso: Autenticación
+## 🔐 Guía de Uso: Autenticación
 Para las operaciones de escritura (POST, PATCH, DELETE), el sistema requiere un token válido:
 
 1. Realiza un POST a /api/v1/login con tus credenciales de administrador.
