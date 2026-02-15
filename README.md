@@ -39,7 +39,7 @@ JWT_EXPIRES_IN=1h
 ```
 (El archivo .env debe estar incluido en el .gitignore para evitar filtraciones de seguridad)
 
-La aplicación se conectará automáticamente a la colección characters y users dentro de la base de datos definida en el URI. Si la base de datos no existe, el driver nativo la creará al realizar la primera inserción
+La aplicación se conectará automáticamente a la colección **characters** y **users** dentro de la base de datos definida en el URI. Si la base de datos no existe, el driver nativo la creará al realizar la primera inserción
 
 ### 3. Ejecución del Servidor
 Para iniciar la API en modo producción:
