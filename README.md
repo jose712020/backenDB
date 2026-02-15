@@ -58,6 +58,6 @@ Para las operaciones de escritura (POST, PATCH, DELETE), el sistema requiere un 
 
 1. Realiza un POST a /api/v1/login con tus credenciales de administrador.
 2. Obtén el token JWT de la respuesta.
-3. Incluye dicho token en el header de tus peticiones: Authorization: Bearer <TOKEN>.
+3. Incluye dicho token en el header de tus peticiones: Authorization: Bearer TOKEN.
 
 Proyecto desarrollado para el módulo de Programación de Servicios y Procesos (2º DAM) - Curso 2025/2026.
