@@ -60,7 +60,8 @@ npm run dev
 
 ## 🚀 Endpoints Principales
 - **Auth:** `POST /api/v1/login`
-- **Characters:** - `GET /api/v1/characters` (Soporta paginación y filtros `series`, `isVillain`)
+- **Characters:**
+  - `GET /api/v1/characters` (Soporta paginación y filtros `series`, `isVillain`)
   - `GET /api/v1/characters/:id`
   - `POST /api/v1/characters` (Protegido)
   - `PATCH /api/v1/characters/:id` (Protegido)
