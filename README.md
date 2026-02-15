@@ -19,6 +19,7 @@ Backend profesional desarrollado en **Node.js** utilizando el driver nativo de *
 - **Seguridad y Autenticación:** Protección de rutas mediante **JWT** (JSON Web Tokens) y encriptación de contraseñas con **bcryptjs**.
 - **Gestión de Auditoría:** Control manual de las fechas de inserción (`createdAt`) y actualización (`updatedAt`) en cada documento.
 - **Filtros y Paginación:** Implementación obligatoria de paginación y filtros personalizados por serie (`series`) y rol (`isVillain`).
+- Gestión de Fechas: Implementación manual de createdAt y updatedAt en la capa de servicios para cumplir con el requisito de auditoría.
 
 ## 💻 Manual de Instalación Local
 
@@ -72,4 +73,4 @@ Para las operaciones de escritura (POST, PATCH, DELETE), el sistema requiere un 
 2. Obtén el token JWT de la respuesta.
 3. Incluye dicho token en el header de tus peticiones: Authorization: Bearer TOKEN.
 
-Proyecto desarrollado para el módulo de Programación de Servicios y Procesos (2º DAM) - Curso 2025/2026.
+Proyecto desarrollado por José Luis Sánchez Henao para el módulo de Programación de Servicios y Procesos (2º DAM) - Curso 2025/2026.
