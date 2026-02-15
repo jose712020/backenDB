@@ -25,7 +25,7 @@ Backend profesional desarrollado en **Node.js** utilizando el driver nativo de *
 Para replicar y ejecutar este proyecto en un entorno local, sigue estos pasos:
 
 ### 0. Requisitos Previos
-- Tener instalado **Node.js** (v18+) y **npm**.
+- Tener instalado **Node.js** (v18+), **npm** y **git**.
 - Disponer de una base de datos **MongoDB** (Local o Atlas).
 
 ### 1. Instalación de Dependencias
@@ -57,6 +57,14 @@ Para desarrollo con recarga automática (Nodemon):
 ```
 npm run dev
 ```
+
+## 🚀 Endpoints Principales
+- **Auth:** `POST /api/v1/login`
+- **Characters:** - `GET /api/v1/characters` (Soporta paginación y filtros `series`, `isVillain`)
+  - `GET /api/v1/characters/:id`
+  - `POST /api/v1/characters` (Protegido)
+  - `PATCH /api/v1/characters/:id` (Protegido)
+  - `DELETE /api/v1/characters/:id` (Protegido)
 
 ## 🏗️ Estructura del Proyecto
 - **src/index.js:** Punto de entrada, configuración de Express, Middlewares y Swagger.
