@@ -17,7 +17,7 @@ Backend profesional desarrollado en **Node.js** utilizando el driver nativo de *
 - **Arquitectura Multicapa:** Separación clara en Controladores, Servicios y Capa de Datos (Database) para asegurar la modularización.
 - **Modelos de Datos Reales:** Gestión de dos modelos completos en MongoDB Atlas: `Characters` (contenido) y `Users` (autenticación).
 - **Seguridad y Autenticación:** Protección de rutas mediante **JWT** (JSON Web Tokens) y encriptación de contraseñas con **bcryptjs**.
-- **Auditoría y Gestión de Fechas:** Control manual de las fechas de inserción (`createdAt`) y actualización (`updatedAt`) en cada documento.
+- **Auditoría y Gestión de Fechas:** Implementación manual en la capa de servicios de los campos (`createdAt`) y (`updatedAt`) para el seguimiento de inserciones y modificaciones.
 - **Filtros y Paginación:** Implementación obligatoria de paginación y filtros personalizados por serie (`series`) y rol (`isVillain`).
 
 ## 💻 Manual de Instalación Local
