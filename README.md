@@ -18,6 +18,10 @@ Backend profesional desarrollado en **Node.js** utilizando el driver nativo de *
 
 Para replicar y ejecutar este proyecto en un entorno local, sigue estos pasos:
 
+### 0. Requisitos Previos
+- Tener instalado **Node.js** (v18+) y **npm**.
+- Disponer de una base de datos **MongoDB** (Local o Atlas).
+
 ### 1. Instalación de Dependencias
 Clona el repositorio y ejecuta el comando para instalar los módulos necesarios (Express, MongoDB Driver, JWT, Bcrypt, etc.):
 ```
