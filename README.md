@@ -2,6 +2,12 @@
 
 Backend profesional desarrollado en **Node.js** utilizando el driver nativo de **MongoDB**. Este proyecto implementa una API REST completa para la gestión de personajes de Dragon Ball, cumpliendo con los requisitos de seguridad, persistencia en base de datos real y buenas prácticas de programación.
 
+## 🛠️ Tecnologías
+- **Runtime:** Node.js
+- **Framework:** Express 
+- **Base de Datos:** MongoDB Atlas
+- **Documentación:** Swagger UI
+
 ## 🌐 Enlaces de interés
 - **API en Producción (Render):** [https://dragonball-api-jl.onrender.com/api/v1/characters](https://dragonball-api-jl.onrender.com/api/v1/characters)
 - **Documentación Interactiva (Swagger):** [https://dragonball-api-jl.onrender.com/api/v1/docs](https://dragonball-api-jl.onrender.com/api/v1/docs)
@@ -13,12 +19,6 @@ Backend profesional desarrollado en **Node.js** utilizando el driver nativo de *
 - **Seguridad y Autenticación:** Protección de rutas mediante **JWT** (JSON Web Tokens) y encriptación de contraseñas con **bcryptjs**.
 - **Gestión de Auditoría:** Control manual de las fechas de inserción (`createdAt`) y actualización (`updatedAt`) en cada documento.
 - **Filtros y Paginación:** Implementación obligatoria de paginación y filtros personalizados por serie (`series`) y rol (`isVillain`).
-
-## 🛠️ Tecnologías
-- **Runtime:** Node.js
-- **Framework:** Express 
-- **Base de Datos:** MongoDB Atlas
-- **Documentación:** Swagger UI
 
 ## 💻 Manual de Instalación Local
 
