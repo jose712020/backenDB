@@ -14,6 +14,12 @@ Backend profesional desarrollado en **Node.js** utilizando el driver nativo de *
 - **Gestión de Auditoría:** Control manual de las fechas de inserción (`createdAt`) y actualización (`updatedAt`) en cada documento.
 - **Filtros y Paginación:** Implementación obligatoria de paginación y filtros personalizados por serie (`series`) y rol (`isVillain`).
 
+## 🛠️ Tecnologías
+- ¡**Runtime:** Node.js
+- **Framework:** Express 
+- **Base de Datos:** MongoDB Atlas
+- **Documentación:** Swagger UI
+
 ## 💻 Manual de Instalación Local
 
 Para replicar y ejecutar este proyecto en un entorno local, sigue estos pasos:
