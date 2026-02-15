@@ -20,7 +20,7 @@ Para replicar y ejecutar este proyecto en un entorno local, sigue estos pasos:
 
 ### 1. Instalación de Dependencias
 Clona el repositorio y ejecuta el comando para instalar los módulos necesarios (Express, MongoDB Driver, JWT, Bcrypt, etc.):
-```bash
+```
 npm install
 ```
 
@@ -37,12 +37,12 @@ JWT_EXPIRES_IN=1h
 
 ### 3. Ejecución del Servidor
 Para iniciar la API en modo producción:
-```bash
+```
 npm start
 ```
 
 Para desarrollo con recarga automática (Nodemon):
-```bash
+```
 npm run dev
 ```
 
